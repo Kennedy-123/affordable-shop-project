@@ -1,0 +1,214 @@
+
+/* nav style */
+:root{
+   --list-style-type: none;
+   --nav-display: flex;
+    --text-decoration: none;
+    --link-color: black;
+    --body-margin: 0;
+    --main-text-font-1: 'Tiro Bangla';
+    --main-text-font-2: 'Roboto Slab', serif;
+    --body-color: lightblue;
+    --body-padding: 0;
+    --body-box-sizing:border-box;
+   }
+ 
+   body{
+      margin: var(--body-margin);
+      background-color: var(--body-color);
+      box-sizing: var(--body-box-sizing);
+      padding: var(--body-padding);
+   }
+   
+ .nav-links{
+    display: var(--nav-display);
+    gap: 35px;
+    list-style-type: var(--list-style-type);
+ }
+
+ a{
+    text-decoration: var(--text-decoration);
+    color: var(--link-color);
+ }
+
+ .products-link{
+   color: steelblue;
+ }
+ 
+ .nav-bar{
+    display: var(--nav-display);
+    justify-content: flex-end;
+    position: relative;
+    left: -40px;
+ }
+
+ .header-nav {
+    margin-right: 5px;
+ }
+
+ .text-link:after{
+   content: "";
+   position: absolute;
+   background-color: hotpink;
+   height: 3px;
+   width: 0;
+   left: 0;
+   bottom: -10px;
+   transition: 0.3s;
+}
+
+.text-link:hover:after{
+   width: 100%;
+}
+
+.text-link{
+   position: relative;
+}
+
+.text-link:hover{
+   color: steelblue;
+}
+
+ .shop-logo{
+   display: inline-block;
+    position: relative;
+    top: -95px;
+ }
+ /* end of nav style */
+ 
+ /* product sections */
+ h2{
+   text-align: center;
+   text-decoration: underline;
+   font-family: var(--main-text-font-2);
+ }
+
+ .product-img{
+   width: 250px;
+   height: 250px;
+}
+
+.grid-container{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 20px;
+   justify-items: center;
+}
+.product-sections{
+   margin-top: -180px;
+   background-color: pink;
+}
+
+/* Footer section */
+footer{
+   padding: 40px, 0;
+   background-color: rgb(130, 202, 250);
+   margin-bottom: 0px;
+   margin-top: 1px;
+   height: 140px;
+}
+
+.social{
+   text-align: center;
+   padding-bottom: 25px;
+   color: #4a4c4d;
+}
+
+footer .social a{
+   font-size: 24px;
+   color: inherit;
+   border: 1px solid #ccc;
+   width: 40px;
+   height: 40px;
+   line-height: 38px;
+   display: inline-block;
+   text-align: center;
+   border-radius: 50%;
+   margin: 0px 8px;
+   opacity: 0.75;
+
+}
+
+footer .social a:hover{
+   opacity: 0.9;
+}
+
+footer ul{
+   margin-top: 0;
+   padding: 0;
+   list-style: none;
+   font-size: 18px;
+   line-height: 1.6;
+   margin-bottom: 0;
+   text-align: center;
+}
+
+footer ul li a{
+   color: #4a4c4d;
+   text-decoration: none;
+   opacity: .8;
+}
+
+footer ul li{
+   display: inline-block;
+   padding: 0 15px;
+}
+
+footer ul li a:hover{
+   opacity: 1;
+   text-decoration: underline;
+}
+
+footer .copyright{
+   margin-top: 15px;
+   text-align: center;
+   font-size: 1rem;
+   font-weight: bolder;
+   color: blue;
+}
+/* end of footer */
+
+.whatsapp-btn-container{
+   position: fixed;
+   right: 30px;
+   opacity: 0.8;
+   bottom: 50px;
+   padding: 24px;
+   animation: fade-up 1000ms forwards;
+   animation-delay: 1000ms;
+}
+
+@keyframes fade-up {
+   100%{
+       bottom: 24px;
+       opacity: 1;
+   }
+}
+
+.whatsapp-btn-container .whatsapp-btn {
+   font-size: 50px;
+   color: #25d366;
+   display: inline-block;
+   transition: all 400ms;
+}
+
+.whatsapp-btn-container .whatsapp-btn:hover{
+   transform: scale(1.2);
+}
+
+.whatsapp-btn-container span {
+   position: absolute;
+   top: 0;
+   left: 4px;
+   font-family:"Roboto", sans-serif;
+   font-weight: bold;
+   color: #075e54;
+   transform: rotateZ(20deg) translateX(10px);
+   opacity: 0;
+   transition: all 400ms;
+}
+
+.whatsapp-btn-container .whatsapp-btn:hover + span {
+   transform: rotateZ(0deg) translateX(0px);
+   opacity: 1;
+}
